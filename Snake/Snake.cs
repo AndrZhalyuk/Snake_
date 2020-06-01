@@ -5,9 +5,9 @@ using System.Text;
 
 namespace Snake
 {
-    class Snake: Figure
+    class Snake : Figure
     {
-        public Direction direction;
+         Direction direction;
         public Snake(Point tail, int length, Direction _direction)
         {
             direction = _direction;
