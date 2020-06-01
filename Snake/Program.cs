@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Snake
 {
@@ -6,7 +7,29 @@ namespace Snake
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.SetWindowSize(80, 25);
+            // Встановлення розміру консоль
+            Console.SetBufferSize(80, 25);
+            
+
+            //Намалювання рамки             
+            HorizontalLine upLine = new HorizontalLine(0, 78, 0, '+');
+            HorizontalLine drownLine = new HorizontalLine(0, 78, 24, '+');
+            VerticalLine leftLine = new VerticalLine(0, 24, 0, '+');
+            VerticalLine rightLine = new VerticalLine(0, 24, 78, '+');
+            upLine.Drow();
+            drownLine.Drow();
+            leftLine.Drow();
+            rightLine.Drow();
+
+           
+
+            //Накид точок
+            Point p1 = new Point(4, 5, '*');
+            p1.Draw();
+
+            Console.ReadLine();
         }
+
     }
 }
